@@ -1,5 +1,6 @@
 document.getElementById("option").addEventListener("change", choose);
 
+document.getElementById("redo").onclick = choose;
 
 function choose() {
     var select = document.getElementById("option");
@@ -9,7 +10,17 @@ function choose() {
     switch (x) {
 
         case "Flip a coin":
-            document.getElementById("test").innerHTML = "coin";
+            var temp;
+            var rand = Math.ceil((Math.random() * 2));
+            switch (rand) {
+                case 1:
+                    temp = "Heads";
+                    break;
+                case 2:
+                    temp = "Tails";
+                    break;
+            }
+            document.getElementById("test").innerHTML = temp;
             break;
 
         case "Roll a dice":
