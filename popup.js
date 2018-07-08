@@ -24,7 +24,9 @@ function choose() {
             break;
 
         case "Roll a dice":
-            document.getElementById("test").innerHTML = "dice";
+
+            var rand = Math.ceil((Math.random() * 6));
+            document.getElementById("test").innerHTML = "You rolled a " + rand;
             break;
 
         case "Generate a number":
