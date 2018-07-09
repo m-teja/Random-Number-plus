@@ -1,11 +1,11 @@
-* {
+.randomPopup {
     text-align: center;
 }
 #limits {
     visibility:hidden;
     font-size: 20px;
 }
-h1 {
+#title {
     padding: 50px;
 }
 #option {
@@ -17,7 +17,7 @@ h1 {
 #value1 , #value2 {
     font-size: 20px;
 }
-button {
+#redo {
     font-size: 20px;
     border-radius: 5px;
     padding: 10px;
@@ -25,10 +25,10 @@ button {
     border-color:black;
     border-width: 2px;
 }
-button:hover {
+#redo:hover {
     opacity: 0.5;
     cursor: pointer;
 }
-button:active {
+#redo:active {
     opacity: 0.8;
 }
