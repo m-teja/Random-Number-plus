@@ -15,7 +15,7 @@
         [
         "<all_urls>"
         ],
-        "js": ["main.js"],
+        "js": [],
         "css": ["popup.css"]
         }    
     ]
