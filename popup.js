@@ -92,6 +92,7 @@ function choose() {
         case "Generate a number":
             hide();
             
+            
             var x = document.getElementById("limits");
             x.style.visibility = "visible";
             
@@ -102,8 +103,10 @@ function choose() {
             var higher = (lower === bound) ? bound1 : bound;
             
             var res = Math.floor(Math.random() * (higher - lower + 1)+ parseInt(lower)) ;
+            if (!(isNaN(res))) {
+                document.getElementById("result").innerHTML = res;
+            }
             
-            document.getElementById("result").innerHTML = res;
             break;
     }
 }
