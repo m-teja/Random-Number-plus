@@ -95,10 +95,15 @@ function choose() {
             var x = document.getElementById("limits");
             x.style.visibility = "visible";
             
-            var test = document.getElementById("value1").value;
-            var test1 = document.getElementById("value2").value;
+            var bound = document.getElementById("value1").value;
+            var bound1 = document.getElementById("value2").value;
             
-            document.getElementById("result").innerHTML = test + " " + test1;
+            var lower = (bound > bound1) ? bound1 : bound;
+            var higher = (lower === bound) ? bound1 : bound;
+            
+            var res = Math.floor(Math.random() * (higher - lower + 1)+ parseInt(lower)) ;
+            
+            document.getElementById("result").innerHTML = res;
             break;
     }
 }
