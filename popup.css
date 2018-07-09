@@ -7,3 +7,24 @@
 h1 {
     padding: 50px;
 }
+#option {
+    font-size: 20px;
+}
+#result {
+    font-size: 20px;
+}
+button {
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    border-style: solid;
+    border-color:black;
+    border-width: 2px;
+}
+button:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+button:active {
+    opacity: 0.8;
+}
