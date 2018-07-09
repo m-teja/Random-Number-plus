@@ -2,6 +2,11 @@ document.getElementById("option").addEventListener("change", choose);
 
 document.getElementById("redo").onclick = choose;
 
+function hide() {
+    var x = document.getElementById("limits");
+    x.style.visibility = "hidden";
+}
+
 function choose() {
     var select = document.getElementById("option");
 
@@ -10,6 +15,8 @@ function choose() {
     switch (x) {
 
         case "Flip a coin":
+            hide();
+            
             var temp;
             var rand = Math.ceil((Math.random() * 2));
             switch (rand) {
@@ -20,16 +27,19 @@ function choose() {
                     temp = "Tails";
                     break;
             }
-            document.getElementById("test").innerHTML = temp;
+            document.getElementById("result").innerHTML = temp;
             break;
 
         case "Roll a dice":
+            hide();
 
             var rand = Math.ceil((Math.random() * 6));
-            document.getElementById("test").innerHTML = "You rolled a " + rand;
+            document.getElementById("result").innerHTML = "You rolled a " + rand;
             break;
 
         case "Draw a random card":
+            hide();
+            
             var rand1 = Math.ceil((Math.random() * 4));
             var suit;
             switch (rand1) {
@@ -70,16 +80,25 @@ function choose() {
                 case 13:
                     rank = "King";
                     break;
+                    
                 default:
                     rank = rand2;
                     break;
             }
-            document.getElementById("test").innerHTML = rank + " of " + suit;
+            document.getElementById("result").innerHTML = rank + " of " + suit;
             break;
 
             
         case "Generate a number":
-            document.getElementById("test").innerHTML = "rng";
+            hide();
+            
+            var x = document.getElementById("limits");
+            x.style.visibility = "visible";
+            
+            var test = document.getElementById("value1").value;
+            var test1 = document.getElementById("value2").value;
+            
+            document.getElementById("result").innerHTML = test + " " + test1;
             break;
     }
 }

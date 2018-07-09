@@ -1,26 +1,44 @@
 <html>
-    <head>
-        
-    </head>
-    <body>
-        <h1>Random Number Generator</h1>
-        
+
+<head>
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+
+<body>
+    <h1>
+        <nobr>Random Number Generator</nobr>
+    </h1>
+
+    <div id = "choice">
         <form>
             <select name="options" id="option">
-                <option value = "coin" id= "coin">Flip a coin</option>
-                <option value = "dice" id = "dice">Roll a dice</option>
-                <option value = "cards" id = "cards">Draw a random card</option>
-                <option value="rng" id = "rng">Generate a number</option>
+                <option value="coin" id="coin">Flip a coin</option>
+                <option value="dice" id="dice">Roll a dice</option>
+                <option value="cards" id="cards">Draw a random card</option>
+                <option value="rng" id="rng">Generate a number</option>
             </select>
         </form>
-        <p id="test">Choose an option</p>
-        <br>
-        <button id = "redo">Generate</button>
-        
-        <script src="popup.js"></script>
-    </body>
+        <p id="result">Choose an option</p>
+    </div>
+    <button id="redo">Generate</button>
+    <br>
+    <div id="added">
+        <div id="limits">
+            <p>Generate a random number between:</p>
+            <input type="number" id="value1">
+            <p>and</p>
+            <input type="number" id="value2">
+
+
+        </div>
+    </div>
     
     
+
+    <script src="popup.js"></script>
+</body>
+
+
 
 
 </html>

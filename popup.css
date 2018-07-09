@@ -1,0 +1,9 @@
+* {
+    text-align: center;
+}
+#limits {
+    visibility:hidden;
+}
+h1 {
+    padding: 50px;
+}
