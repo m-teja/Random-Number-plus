@@ -16,7 +16,7 @@
                 <option value="dice" id="dice">Roll a dice</option>
                 <option value="cards" id="cards">Draw a random card</option>
                 <option value="rng" id="rng">Generate a number</option>
-                <option value="letter" id="letter">Generate a random 10 letter string</option>
+                <option value="letter" id="letter">Generate a random 10 character string</option>
             </select>
         </form>
         <p id="result">Choose an option</p>
@@ -32,10 +32,15 @@
         </div>
         
         <div id="include">
-            <p>Include Numbers:</p>
+            <p>Include letters</p>
+            <input type="checkbox" id="letters" checked="true">
+            
+            <p>Include numbers:</p>
             <input type="checkbox" id="numbers">
-            <p>Include special characters:</p>
+            
+            <p>Include special characters</p>
             <input type="checkbox" id="special">
+            
         </div>
     </div>
     

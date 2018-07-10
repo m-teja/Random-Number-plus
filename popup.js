@@ -111,17 +111,33 @@ function choose() {
             
             break;
         
-        case "Generate a random 10 letter string":
+        case "Generate a random 10 character string":
             hide();
+            
+            var letters = "";
+            
+            if (document.getElementById("letters").checked === true) {
+                letters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            }
+            if (document.getElementById("numbers").checked === true) {
+                letters += "1234567890";
+            }
+            if (document.getElementById("special").checked === true) {
+                letters += "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+            }
+            
+            
+            
+            
             
             var x = document.getElementById("include");
             x.style.display = "inline";
-            var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            
             var out = "";
             
             for (x = 0; x < 10; x++) {
-                var rand = Math.floor(Math.random() * 26);
-                out+= letters.charAt(rand);
+                var rand = Math.floor(Math.random() * letters.length);
+                out += letters.charAt(rand);
             }
             document.getElementById("result").innerHTML = out;
             
