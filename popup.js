@@ -32,7 +32,7 @@ function choose() {
 
         case "Roll a dice":
             hide();
-
+            
             var rand = Math.ceil((Math.random() * 6));
             document.getElementById("result").innerHTML = "You rolled a " + rand;
             break;
@@ -92,7 +92,6 @@ function choose() {
         case "Generate a number":
             hide();
             
-            
             var x = document.getElementById("limits");
             x.style.visibility = "visible";
             
@@ -108,5 +107,18 @@ function choose() {
             }
             
             break;
+        
+        case "Generate a random 10 letter string":
+            hide();
+            
+            var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var out = "";
+            
+            for (x = 0; x < 10; x++) {
+                var rand = Math.floor(Math.random() * 26);
+                out+= letters.charAt(rand);
+            }
+            document.getElementById("result").innerHTML = out;
+            
     }
 }
