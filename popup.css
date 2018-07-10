@@ -2,7 +2,7 @@
     text-align: center;
 }
 #limits {
-    visibility:hidden;
+    display:none;
     font-size: 20px;
 }
 #title {
@@ -31,4 +31,11 @@
 }
 #redo:active {
     opacity: 0.8;
+}
+#include {
+    font-size: 20px;
+    display:none;
+}
+input[type=checkbox] {
+    zoom: 1.5;
 }

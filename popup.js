@@ -4,7 +4,10 @@ document.getElementById("redo").onclick = choose;
 
 function hide() {
     var x = document.getElementById("limits");
-    x.style.visibility = "hidden";
+    x.style.display = "none";
+    
+    var x1 = document.getElementById("include");
+    x1.style.display = "none";
 }
 
 function choose() {
@@ -93,7 +96,7 @@ function choose() {
             hide();
             
             var x = document.getElementById("limits");
-            x.style.visibility = "visible";
+            x.style.display = "inline";
             
             var bound = document.getElementById("value1").value;
             var bound1 = document.getElementById("value2").value;
@@ -111,6 +114,8 @@ function choose() {
         case "Generate a random 10 letter string":
             hide();
             
+            var x = document.getElementById("include");
+            x.style.display = "inline";
             var letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
             var out = "";
             
