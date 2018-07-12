@@ -8,6 +8,8 @@ function hide() {
     
     var x1 = document.getElementById("include");
     x1.style.display = "none";
+    var x2 = document.getElementById("anaInput");
+    x2.style.display = "none";
 }
 
 function choose() {
@@ -18,6 +20,7 @@ function choose() {
     switch (x) {
 
         case "Flip a coin":
+            
             hide();
             
             var temp;
@@ -34,6 +37,7 @@ function choose() {
             break;
 
         case "Roll a dice":
+            
             hide();
             
             var rand = Math.ceil((Math.random() * 6));
@@ -41,6 +45,7 @@ function choose() {
             break;
 
         case "Draw a random card":
+            
             hide();
             
             var rand1 = Math.ceil((Math.random() * 4));
@@ -93,8 +98,8 @@ function choose() {
 
             
         case "Generate a number":
-            hide();
             
+            hide();
             var x = document.getElementById("limits");
             x.style.display = "inline";
             
@@ -112,6 +117,7 @@ function choose() {
             break;
         
         case "Generate a random 10 character string":
+            
             hide();
             
             var letters = "";
@@ -142,7 +148,10 @@ function choose() {
             break;
             
         case "Generate an anagram":
+            
             hide();
+            var x = document.getElementById("anaInput");
+            x.style.display = "inline";
             
             var input = document.getElementById("anagram").value;
             
