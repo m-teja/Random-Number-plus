@@ -1,12 +1,9 @@
 .randomPopup {
     text-align: center;
 }
-#limits {
-    display:none;
-    font-size: 20px;
-}
+
 #title {
-    padding: 50px;
+    padding: 50px 75px;
 }
 #option {
     font-size: 20px;
@@ -35,6 +32,10 @@
 #include {
     font-size: 20px;
     display:none;
+}
+#limits {
+    display:none;
+    font-size: 20px;
 }
 input[type=checkbox] {
     zoom: 1.5;

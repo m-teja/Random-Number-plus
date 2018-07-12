@@ -6,7 +6,7 @@
 
 <body class = "randomPopup">
     <h1 id = "title">
-        <nobr>Random Number Generator</nobr>
+        <nobr>Random Number Plus</nobr>
     </h1>
 
     <div id = "choice">
@@ -17,6 +17,7 @@
                 <option value="cards" id="cards">Draw a random card</option>
                 <option value="rng" id="rng">Generate a number</option>
                 <option value="letter" id="letter">Generate a random 10 character string</option>
+                <option value="scramble" id="scramble">Generate an anagram</option>
             </select>
         </form>
         <p id="result">Choose an option</p>
@@ -32,7 +33,7 @@
         </div>
         
         <div id="include">
-            <p>Include letters</p>
+            <p>Include letters:</p>
             <input type="checkbox" id="letters" checked="true">
             
             <p>Include numbers:</p>
@@ -42,14 +43,14 @@
             <input type="checkbox" id="special">
             
         </div>
+        
+        <div id="anaInput">
+            <p>Input your word to be scrambled</p>
+            <input type="text" id="anagram">
+        </div>
     </div>
-    
-    
 
     <script src="popup.js"></script>
 </body>
-
-
-
 
 </html>

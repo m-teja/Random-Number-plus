@@ -125,11 +125,7 @@ function choose() {
             if (document.getElementById("special").checked === true) {
                 letters += "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
             }
-            
-            
-            
-            
-            
+
             var x = document.getElementById("include");
             x.style.display = "inline";
             
@@ -139,7 +135,27 @@ function choose() {
                 var rand = Math.floor(Math.random() * letters.length);
                 out += letters.charAt(rand);
             }
+            if (out.length === 0) {
+                out = "-";
+            }
             document.getElementById("result").innerHTML = out;
+            break;
             
+        case "Generate an anagram":
+            hide();
+            
+            var input = document.getElementById("anagram").value;
+            
+            var ary = input.toString().split('');
+            var out = "";
+            var repeat = ary.length;
+            for (x = 0; x < repeat; x++) {
+                var temp = Math.floor(Math.random() * ary.length);
+                out += ary.splice(temp-1, 1);
+                console.log(ary.length);
+            }
+            document.getElementById("result").innerHTML = out;
+            break;
+       
     }
 }
